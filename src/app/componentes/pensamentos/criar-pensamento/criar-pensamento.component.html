@@ -13,7 +13,7 @@
       placeholder="Digite um pensamento">
 
       <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
-        Pensamento é obrigatório!
+        Conteúdo é obrigatório!
       </div>
 
     <label for="pensamento">Auditoria ou fonte</label>
@@ -29,6 +29,10 @@
       </div>
       <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minlength']">
         Autoria precisa ter no minimo 3 caracteres!
+      </div>
+
+      <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minusculo'] && formulario.get('autoria')?.touched">
+        Esse campo aceita apenas letras minusculas
       </div>
 
       <label for="modelo">Selecione o modelo do card:</label>
