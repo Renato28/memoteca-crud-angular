@@ -1,4 +1,4 @@
-import { AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
+import { AbstractControl } from "@angular/forms";
 
 export function minusculoValidators(control: AbstractControl) {
   const autoria = control.value as string;

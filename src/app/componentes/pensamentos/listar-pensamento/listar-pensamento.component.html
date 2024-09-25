@@ -8,6 +8,10 @@
       <app-pensamento [pensamento]="pensamento"></app-pensamento>
     </div>
   </div>
+  <app-botao-carregar-mais
+  [haMaisPensamentos]="haMaisPensamentos"
+  (click)="carregarMaisPensamentos()">
+  </app-botao-carregar-mais>
   <ng-template #semPensamentos>
     <div class="ff-inter sem-pensamentos">
       <p>Ainda não há pensamentos cadastrados!</p>
